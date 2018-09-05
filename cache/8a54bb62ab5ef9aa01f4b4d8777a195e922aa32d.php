@@ -9,10 +9,9 @@
 </head>
 <body>
 <h1>Main page</h1>
-<?php
-foreach ($users as $user) {
-    echo '<p>' . $user['name'] . ': ' . $user['email'] . '</p>';
-}
-?>
+
+<?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+    <p><?php echo e($user['name'] . ': ' . $user['email']); ?></p>
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 </body>
 </html>

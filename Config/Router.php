@@ -6,10 +6,7 @@ namespace Config;
  * Router
  */
 class Router {
-//
-//    protected $routes = [];
-//    protected $parameters = [];
-
+    
     /*
      * Manage routes
      *

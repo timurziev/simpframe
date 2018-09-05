@@ -3,6 +3,14 @@ namespace App\Controllers;
 
 class Controller
 {
+    protected $views;
+    protected $cache;
+
+    public function __construct()
+    {
+        $this->views = dirname(__DIR__) . '../../views';
+        $this->cache = dirname(__DIR__) . '../../cache';
+    }
     /**
      * Render a view file
      *

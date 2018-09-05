@@ -15,7 +15,7 @@ abstract class Model
      */
     protected static function DB()
     {
-        $database = 'mysql:host=' . Database::DB_HOST . ';dbname=' . Database::DB_NAME . ';charset=utf8';
+        $database = 'mysql:host=' . Database::DB_HOST . ';dbname=' . Database::DB_NAME . ';charset=utf8;port=3307';
         $db = new PDO($database, Database::DB_USER, Database::DB_PASSWORD);
 
         // In case of error return an exception

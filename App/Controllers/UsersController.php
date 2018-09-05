@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\User;
+use Philo\Blade\Blade;
 
 class UsersController extends Controller {
 
@@ -10,6 +11,7 @@ class UsersController extends Controller {
     {
         $users = User::users();
 
-        return $this->view('users', ['users' => $users]);
+        $blade = new Blade($this->views, $this->cache);
+        echo $blade->view()->make('users', ['users' => $users])->render();
     }
 }
