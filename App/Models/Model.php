@@ -9,7 +9,7 @@ abstract class Model
 {
 
     /**
-     * Connect to database
+     * Connect to the database
      *
      * @return mixed
      */

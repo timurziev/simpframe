@@ -2,8 +2,12 @@
 
 namespace App\Controllers;
 
-class PostsController {
-
+class PostsController
+{
+    /**
+     * Display a listing of the resource.
+     *
+     */
     public function index()
     {
         echo 'hurrray';

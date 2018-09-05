@@ -1,17 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<h1>Main page</h1>
-
-<?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-    <p><?php echo e($user['name'] . ': ' . $user['email']); ?></p>
-<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-</body>
-</html>
+<?php $__env->startSection('content'); ?>
+    <div class="container">
+        <h1>Users page</h1>
+        <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <p><?php echo e($user['name'] . ': ' . $user['email']); ?></p>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

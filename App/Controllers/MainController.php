@@ -2,11 +2,18 @@
 
 namespace App\Controllers;
 
-class MainController extends Controller {
+use Philo\Blade\Blade;
 
+class MainController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     */
     public function index()
     {
-        $var = ['hello', 'world'];
-        $this->view('home', ['var' => $var]);
+        $blade = new Blade($this->views, $this->cache);
+
+        echo $blade->view()->make('home')->render();
     }
 }

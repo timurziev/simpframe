@@ -6,11 +6,16 @@ class Controller
     protected $views;
     protected $cache;
 
+    /*
+     * Define paths for directories
+     *
+     */
     public function __construct()
     {
         $this->views = dirname(__DIR__) . '../../views';
         $this->cache = dirname(__DIR__) . '../../cache';
     }
+
     /**
      * Render a view file
      *
