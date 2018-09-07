@@ -1,6 +1,8 @@
 <?php
 namespace App\Controllers;
 
+use Philo\Blade\Blade;
+
 class Controller
 {
     protected $views;
@@ -20,14 +22,13 @@ class Controller
      * Render a view file
      *
      * @param string $view
-     * @param array $params
+     * @param array $array
      *
-     * @return void
      */
-    public static function view($view, $params = [])
+    public function view($view, $array)
     {
-        extract($params, EXTR_SKIP);
+        $blade = new Blade($this->views, $this->cache);
 
-        require $file = dirname(__DIR__) . "/..\\views\\$view.php";
+        echo $blade->view()->make($view, [$view => $array])->render();
     }
 }

@@ -23,4 +23,21 @@ abstract class Model
 
         return $db;
     }
+
+    /**
+     * Get items from database
+     *
+     * @var $param
+     * @var $id
+     *
+     * @return mixed
+     */
+    public static function items($param, $id)
+    {
+        $db = static::DB();
+        $sql = isset($id) ? "SELECT * FROM $param WHERE id = $id" : "SELECT * FROM $param";
+        $result = $db->query($sql);
+
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

@@ -16,8 +16,6 @@ class PostsController extends Controller
     {
         $posts = Post::posts($id);
 
-        $blade = new Blade($this->views, $this->cache);
-
-        echo $blade->view()->make('posts', ['posts' => $posts])->render();
+        return static::view('posts', $posts);
     }
 }
