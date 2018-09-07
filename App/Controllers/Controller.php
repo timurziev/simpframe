@@ -6,7 +6,7 @@ class Controller
     protected $views;
     protected $cache;
 
-    /*
+    /**
      * Define paths for directories
      *
      */

@@ -18,10 +18,10 @@
                         <a class="nav-link" href="/public">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="users">Пользователи</a>
+                        <a class="nav-link" href="/public/users">Пользователи</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="posts">Посты</a>
+                        <a class="nav-link" href="/public/posts">Посты</a>
                     </li>
                 </ul>
             </div>

@@ -4,7 +4,7 @@ namespace Config;
 
 class Router
 {
-    /*
+    /**
      * Manage routes
      *
      * @param string $route
@@ -18,6 +18,7 @@ class Router
 
         $controller = new $controller;
 
-        $controller->index();
+
+            $controller->index($params[3]);
     }
 }

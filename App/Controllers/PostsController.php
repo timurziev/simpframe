@@ -2,14 +2,22 @@
 
 namespace App\Controllers;
 
-class PostsController
+use App\Models\Post;
+use Philo\Blade\Blade;
+
+class PostsController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource or a single item.
      *
+     * @var $id
      */
-    public function index()
+    public function index($id)
     {
-        echo 'hurrray';
+        $posts = Post::posts($id);
+
+        $blade = new Blade($this->views, $this->cache);
+
+        echo $blade->view()->make('posts', ['posts' => $posts])->render();
     }
 }
