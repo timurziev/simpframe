@@ -6,22 +6,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>MVC</title>
+    <title>Simpframe</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
         <div class="container d-flex justify-content-between">
-            <a class="navbar-brand" href="/public">MVC</a>
+            <a class="navbar-brand" href="/public">Simpframe</a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/public">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/public/users">Пользователи</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/public/posts">Посты</a>
+                        <a class="nav-link" href="/public">Home</a>
                     </li>
                 </ul>
             </div>
