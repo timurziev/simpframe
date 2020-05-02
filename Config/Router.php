@@ -14,11 +14,10 @@ class Router
     {
         $params = explode('/', $route);
 
-        $controller = 'App\\Controllers\\' . ($params[2] ? ucfirst($params[2]) : 'Main') . 'Controller';
+        $controller = 'App\\Controllers\\' . ($params[1] ? ucfirst($params[1]) : 'Main') . 'Controller';
 
         $controller = new $controller;
 
-
-            $controller->index($params[3]);
+        !$params[2] ? $controller->index() : $controller->{$params[2]}();
     }
 }

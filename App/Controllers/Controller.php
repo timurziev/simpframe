@@ -29,6 +29,6 @@ class Controller
     {
         $blade = new Blade($this->views, $this->cache);
 
-        echo $blade->view()->make($view, [$view => $array])->render();
+        return $blade->view()->make($view, [$view => $array])->render();
     }
 }
